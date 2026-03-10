@@ -1,7 +1,7 @@
-package com.jccruz.invoicing.controller;
+package com.jccruz.invoicing.parties.controller;
 
-import com.jccruz.invoicing.model.Tercero;
-import com.jccruz.invoicing.service.TerceroService;
+import com.jccruz.invoicing.parties.model.Tercero;
+import com.jccruz.invoicing.parties.service.TerceroService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -15,7 +15,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/terceros")
 @RequiredArgsConstructor
-public class TerceroController {
+public class  TerceroController {
 
     private final TerceroService terceroService;
 

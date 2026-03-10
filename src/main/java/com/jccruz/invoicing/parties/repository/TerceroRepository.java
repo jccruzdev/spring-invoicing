@@ -1,6 +1,6 @@
-package com.jccruz.invoicing.repo;
+package com.jccruz.invoicing.parties.repository;
 
-import com.jccruz.invoicing.model.Tercero;
+import com.jccruz.invoicing.parties.model.Tercero;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

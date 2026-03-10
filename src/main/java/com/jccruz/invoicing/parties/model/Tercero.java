@@ -1,4 +1,4 @@
-package com.jccruz.invoicing.model;
+package com.jccruz.invoicing.parties.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

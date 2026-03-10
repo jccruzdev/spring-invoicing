@@ -1,7 +1,7 @@
-package com.jccruz.invoicing.service;
+package com.jccruz.invoicing.parties.service;
 
-import com.jccruz.invoicing.model.Tercero;
-import com.jccruz.invoicing.repo.TerceroRepository;
+import com.jccruz.invoicing.parties.model.Tercero;
+import com.jccruz.invoicing.parties.repository.TerceroRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
