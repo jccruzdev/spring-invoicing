@@ -13,4 +13,5 @@ public interface TerceroRepository extends JpaRepository<Tercero, Integer> {
     List<Tercero> findByEstadoTrueOrderByFechaCreacionDesc();
     Page<Tercero> findByEstadoTrueOrderByFechaCreacionDesc(Pageable pageable);
     List<Tercero> findByEstadoFalseOrderByFechaCreacionDesc();
+    Boolean existsByNumeroIdentificacion(String numeroIdentificacion);
 }

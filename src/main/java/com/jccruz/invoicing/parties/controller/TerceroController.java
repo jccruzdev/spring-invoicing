@@ -3,13 +3,13 @@ package com.jccruz.invoicing.parties.controller;
 import com.jccruz.invoicing.parties.model.Tercero;
 import com.jccruz.invoicing.parties.service.TerceroService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import java.net.URI;
 import java.util.List;
 
 @RestController
@@ -33,4 +33,14 @@ public class  TerceroController {
     public ResponseEntity<List<Tercero>> getInactiveTerceros() {
         return ResponseEntity.ok(terceroService.getInactiveTerceros());
     }
+
+    @PostMapping
+    public ResponseEntity<Tercero> save(@RequestBody Tercero tercero){
+            Tercero savedTercero = terceroService.save(tercero);
+
+            return ResponseEntity
+                    .created(URI.create("terceros/"+savedTercero.getId()))
+                    .body(savedTercero);
+    }
+
 }

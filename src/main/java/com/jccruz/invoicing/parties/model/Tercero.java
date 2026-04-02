@@ -18,7 +18,7 @@ public class Tercero {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
 
     @Column(name = "tipo_organizacion_id", nullable = false)
     private Integer tipoOrganizacionId;
@@ -44,7 +44,7 @@ public class Tercero {
     @Column(name = "tipo_responsabilidad_id", nullable = false)
     private Integer tipoResponsabilidadId;
 
-    @Column(name = "numero_identificacion", nullable = false, length = 30)
+    @Column(name = "numero_identificacion", nullable = false, length = 30, unique = true)
     private String numeroIdentificacion;
 
     @Column(name = "dv", length = 2)
@@ -62,9 +62,9 @@ public class Tercero {
     @Column(name = "direccion", nullable = false, length = 200)
     private String direccion;
 
-    @Column(name = "estado", nullable = false)
+    @Column(name = "estado", insertable = false)
     private Boolean estado = true;
 
-    @Column(name = "fecha_creacion", nullable = false)
+    @Column(name = "fecha_creacion", insertable = false, updatable = false)
     private LocalDateTime fechaCreacion;
 }
