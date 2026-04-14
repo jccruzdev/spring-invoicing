@@ -9,7 +9,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(BusinessException.class)
     public ResponseEntity<ApiErrorResponse> handleBusinessException(BusinessException ex){
-        ApiErrorResponse response = new ApiErrorResponse(ex.getMessage_code(), ex.getMessage_description());
+        ApiErrorResponse response = new ApiErrorResponse(false, ex.getMessage_code(), ex.getMessage_description());
         return ResponseEntity
                 .status(ex.getHttp_status())
                 .body(response);

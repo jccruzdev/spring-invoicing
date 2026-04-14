@@ -1,3 +1,3 @@
 package com.jccruz.invoicing.handlers.exception_handler;
 
-public record ApiErrorResponse(String error, String message){}
+public record ApiErrorResponse(boolean isValid, String error, String message){}
